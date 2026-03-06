@@ -5,21 +5,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: 🏗 Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: 🏗 Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'npm'
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: npm install
 
-      - name: Setup EAS CLI
-        run: npm install -g eas-cli
-
-      - name: Build APK
-        run: eas build --platform android --profile preview --non-interactive
+      - name: 🚀 Build with EAS
+        run: npx eas-cli build --platform android --profile preview --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
