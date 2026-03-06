@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Auto Sync App",
+    "slug": "auto-photo-sync",
+    "version": "1.0.0",
+    "android": {
+      "package": "com.yourname.autophotosync",
+      "permissions": ["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
+    }
+  }
+}
